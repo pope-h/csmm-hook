@@ -73,11 +73,7 @@ contract CSMMTest is Test, Deployers {
         uint256 balanceOfTokenBBefore = key.currency1.balanceOfSelf();
         swapRouter.swap(
             key,
-            SwapParams({
-                zeroForOne: true,
-                amountSpecified: -100e18,
-                sqrtPriceLimitX96: TickMath.MIN_SQRT_PRICE + 1
-            }),
+            SwapParams({zeroForOne: true, amountSpecified: -100e18, sqrtPriceLimitX96: TickMath.MIN_SQRT_PRICE + 1}),
             settings,
             ZERO_BYTES
         );
@@ -97,11 +93,7 @@ contract CSMMTest is Test, Deployers {
         uint256 balanceOfTokenBBefore = key.currency1.balanceOfSelf();
         swapRouter.swap(
             key,
-            SwapParams({
-                zeroForOne: true,
-                amountSpecified: 100e18,
-                sqrtPriceLimitX96: TickMath.MIN_SQRT_PRICE + 1
-            }),
+            SwapParams({zeroForOne: true, amountSpecified: 100e18, sqrtPriceLimitX96: TickMath.MIN_SQRT_PRICE + 1}),
             settings,
             ZERO_BYTES
         );
